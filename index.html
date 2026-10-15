@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#16241f" />
+    <meta name="description" content="两人共享的训练视频与记录工具" />
+    <title>练练 · 训练记录</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <a class="brand" href="#home" aria-label="练练首页"><span>练</span>练</a>
+        <button class="profile-trigger" id="profileTrigger" type="button" aria-label="切换训练者"></button>
+      </header>
+
+      <section id="userPicker" class="user-picker" aria-live="polite"></section>
+      <nav class="tabs" aria-label="主导航">
+        <button class="tab active" data-view="home" type="button">训练</button>
+        <button class="tab" data-view="library" type="button">我的视频</button>
+        <button class="tab" data-view="records" type="button">记录</button>
+        <button class="tab" data-view="people" type="button">伙伴</button>
+      </nav>
+
+      <section id="view-home" class="view active"></section>
+      <section id="view-library" class="view"></section>
+      <section id="view-records" class="view"></section>
+      <section id="view-people" class="view"></section>
+    </main>
+
+    <dialog id="videoDialog" class="dialog"></dialog>
+    <dialog id="trainDialog" class="dialog training-dialog"></dialog>
+    <dialog id="recordDialog" class="dialog"></dialog>
+    <dialog id="avatarDialog" class="dialog"></dialog>
+    <div id="toast" class="toast" role="status"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
